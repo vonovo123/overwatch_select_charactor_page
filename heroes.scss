@@ -1,0 +1,13 @@
+@mixin vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroes {
+  @include vertical-center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px;
+  @import "./hero.scss";
+}

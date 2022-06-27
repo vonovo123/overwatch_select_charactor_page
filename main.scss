@@ -1,0 +1,21 @@
+// & - 상위 선택자 참조
+// : 중첩된 속성 - 네임스페이스 생성ㅇ
+// $ : 변수
+// @ : mixin
+// @for $i from 1 through 32 : 반복문
+// @function ratio($size, $ratio){ @return $size * $ratio} : 함수
+$url: "https://raw.githubuserContent.com/ParkYoungWoong/overwatch-hero-selector-vanilla/master/images";
+body {
+  height: 100vh;
+  background: {
+    image: url("#{$url}/bg.jpg");
+    size: cover;
+    repeat: no-repeat;
+    attachment: fixed;
+  }
+  .container {
+    padding: 50px 0;
+    @import "./heroes.scss";
+    @import "./logo.scss";
+  }
+}
